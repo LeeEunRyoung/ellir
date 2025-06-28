@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - 랜딩 페이지</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>MyBrand</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">홈</a></li>
+                <li><a href="#about">소개</a></li>
+                <li><a href="#services">서비스</a></li>
+                <li><a href="#contact">연락처</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>환영합니다</h1>
+                <p>혁신적인 솔루션으로 당신의 비즈니스를 성장시키세요</p>
+                <button class="cta-button" onclick="scrollToSection('contact')">시작하기</button>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>우리에 대해</h2>
+                <p>우리는 고객의 성공을 위해 최선을 다하는 전문가 팀입니다. 최신 기술과 창의적인 아이디어로 여러분의 목표를 달성하도록 도와드립니다.</p>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2>서비스</h2>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <h3>웹 개발</h3>
+                        <p>반응형 웹사이트 및 웹 애플리케이션 개발</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>디자인</h3>
+                        <p>사용자 경험을 고려한 UI/UX 디자인</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>컨설팅</h3>
+                        <p>비즈니스 전략 및 기술 컨설팅 서비스</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>연락처</h2>
+                <form class="contact-form">
+                    <input type="text" placeholder="이름" required>
+                    <input type="email" placeholder="이메일" required>
+                    <textarea placeholder="메시지" rows="5" required></textarea>
+                    <button type="submit">메시지 보내기</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 MyBrand. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
