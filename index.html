@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome - 랜딩 페이지</title>
+    <title>몽골의 영원한 하늘 - Mongolia Eternal Sky</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#3b82f6',
-                        secondary: '#10b981',
-                        accent: '#f59e0b',
+                        primary: '#dc2626',
+                        secondary: '#2563eb',
+                        accent: '#fbbf24',
+                        mongolRed: '#dc2626',
+                        mongolBlue: '#2563eb',
+                        mongolYellow: '#fbbf24',
+                        mongolGreen: '#16a34a',
+                        mongolWhite: '#ffffff',
                     },
                     fontFamily: {
                         'sans': ['Inter', 'system-ui', 'sans-serif'],
@@ -44,15 +49,15 @@
             <div class="flex justify-between items-center h-16">
                 <div class="flex-shrink-0">
                     <h1 class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                        MyBrand
+                        Монгол | Mongolia
                     </h1>
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#home" class="nav-link text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">홈</a>
-                        <a href="#about" class="nav-link text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">소개</a>
-                        <a href="#services" class="nav-link text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">서비스</a>
-                        <a href="#contact" class="nav-link text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">연락처</a>
+                        <a href="#home" class="nav-link text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">홈 | Гэр</a>
+                        <a href="#about" class="nav-link text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">문화 | Соёл</a>
+                        <a href="#services" class="nav-link text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">전통 | Уламжлал</a>
+                        <a href="#contact" class="nav-link text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">연락 | Холбоо</a>
                     </div>
                 </div>
                 <div class="md:hidden">
@@ -66,39 +71,44 @@
         </nav>
         <div class="mobile-menu hidden md:hidden bg-white border-t border-gray-200">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">홈</a>
-                <a href="#about" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">소개</a>
-                <a href="#services" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">서비스</a>
-                <a href="#contact" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">연락처</a>
+                <a href="#home" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">홈 | Гэр</a>
+                <a href="#about" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">문화 | Соёл</a>
+                <a href="#services" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">전통 | Уламжлал</a>
+                <a href="#contact" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">연락 | Холбоо</a>
             </div>
         </div>
     </header>
 
     <main>
-        <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50">
-            <div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"></div>
-            <div class="absolute top-20 left-10 w-32 h-32 bg-primary/10 rounded-full blur-xl animate-bounce-slow"></div>
-            <div class="absolute bottom-20 right-10 w-48 h-48 bg-secondary/10 rounded-full blur-xl animate-bounce-slow" style="animation-delay: 1s;"></div>
+        <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-mongolBlue/20 via-mongolWhite to-mongolRed/20">
+            <div class="absolute inset-0 bg-gradient-to-br from-mongolRed/10 via-transparent to-mongolBlue/10"></div>
+            <div class="absolute top-20 left-10 w-32 h-32 bg-mongolYellow/20 rounded-full blur-xl animate-bounce-slow"></div>
+            <div class="absolute bottom-20 right-10 w-48 h-48 bg-mongolGreen/20 rounded-full blur-xl animate-bounce-slow" style="animation-delay: 1s;"></div>
+            <div class="absolute top-1/2 left-1/4 w-24 h-24 opacity-10">
+                <svg viewBox="0 0 100 100" class="w-full h-full text-mongolRed">
+                    <path d="M50 10 L55 30 L50 35 L45 30 Z M25 35 L45 35 L50 40 L45 45 L25 45 L20 40 Z M75 35 L80 40 L75 45 L55 45 L50 40 L55 35 Z M50 65 L55 70 L50 90 L45 70 Z" fill="currentColor"/>
+                </svg>
+            </div>
             
             <div class="relative text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
                 <h1 class="text-5xl md:text-7xl font-extrabold text-gray-900 mb-8 animate-fade-in-up">
-                    혁신을 통한
-                    <span class="block bg-gradient-to-r from-primary via-purple-500 to-secondary bg-clip-text text-transparent">
-                        성장의 파트너
+                    영원한 푸른 하늘
+                    <span class="block bg-gradient-to-r from-mongolRed via-mongolYellow to-mongolBlue bg-clip-text text-transparent">
+                        Мөнх хөх тэнгэр
                     </span>
                 </h1>
                 <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in-up" style="animation-delay: 0.2s;">
-                    최신 기술과 창의적인 솔루션으로 여러분의 비즈니스를 다음 단계로 끌어올리세요
+                    몽골의 전통과 문화를 담은 아름다운 디자인으로 여러분의 꿈을 현실로 만들어드립니다
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style="animation-delay: 0.4s;">
-                    <button onclick="scrollToSection('contact')" class="inline-flex items-center px-8 py-4 border border-transparent text-lg font-semibold rounded-full text-white bg-gradient-to-r from-primary to-blue-600 hover:from-blue-600 hover:to-primary transform hover:scale-105 transition-all duration-200 shadow-xl hover:shadow-2xl">
-                        <span>시작하기</span>
+                    <button onclick="scrollToSection('contact')" class="inline-flex items-center px-8 py-4 border border-transparent text-lg font-semibold rounded-full text-white bg-gradient-to-r from-mongolRed to-mongolBlue hover:from-mongolBlue hover:to-mongolRed transform hover:scale-105 transition-all duration-200 shadow-xl hover:shadow-2xl">
+                        <span>여행 시작하기</span>
                         <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                         </svg>
                     </button>
-                    <button onclick="scrollToSection('about')" class="inline-flex items-center px-8 py-4 border-2 border-gray-300 text-lg font-semibold rounded-full text-gray-700 bg-white hover:bg-gray-50 hover:border-primary transition-all duration-200 shadow-lg hover:shadow-xl">
-                        더 알아보기
+                    <button onclick="scrollToSection('about')" class="inline-flex items-center px-8 py-4 border-2 border-mongolRed text-lg font-semibold rounded-full text-mongolRed bg-white hover:bg-mongolRed hover:text-white transition-all duration-200 shadow-lg hover:shadow-xl">
+                        몽골 문화 탐험
                     </button>
                 </div>
             </div>
@@ -108,37 +118,49 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                        우리에 대해
+                        몽골의 문화와 전통 | Монголын соёл
                     </h2>
                     <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
                 </div>
                 <div class="grid lg:grid-cols-2 gap-16 items-center">
                     <div class="space-y-8">
                         <p class="text-lg text-gray-600 leading-relaxed">
-                            우리는 고객의 성공을 위해 최선을 다하는 전문가 팀입니다. 최신 기술과 창의적인 아이디어로 여러분의 목표를 달성하도록 도와드립니다.
+                            몽골은 수천 년의 역사와 풍부한 문화유산을 지닌 나라입니다. 영원한 푸른 하늘 아래 유목민의 전통과 비밀스러운 소요보 문자, 그리고 전통 문양이 어우러진 독특한 아름다움을 선사합니다.
                         </p>
                         <div class="grid grid-cols-2 gap-8">
                             <div class="text-center">
-                                <div class="text-3xl font-bold text-primary mb-2">100+</div>
-                                <div class="text-gray-600">완료된 프로젝트</div>
+                                <div class="text-3xl font-bold text-mongolRed mb-2">1500+</div>
+                                <div class="text-gray-600">전통 문양</div>
                             </div>
                             <div class="text-center">
-                                <div class="text-3xl font-bold text-primary mb-2">50+</div>
-                                <div class="text-gray-600">만족한 고객</div>
+                                <div class="text-3xl font-bold text-mongolBlue mb-2">5가지</div>
+                                <div class="text-gray-600">성스러운 색깔</div>
                             </div>
                             <div class="text-center">
-                                <div class="text-3xl font-bold text-primary mb-2">5년</div>
-                                <div class="text-gray-600">경험</div>
+                                <div class="text-3xl font-bold text-mongolYellow mb-2">수천년</div>
+                                <div class="text-gray-600">역사와 전통</div>
                             </div>
                             <div class="text-center">
-                                <div class="text-3xl font-bold text-primary mb-2">24/7</div>
-                                <div class="text-gray-600">지원</div>
+                                <div class="text-3xl font-bold text-mongolGreen mb-2">∞</div>
+                                <div class="text-gray-600">영원한 아름다움</div>
                             </div>
                         </div>
                     </div>
                     <div class="relative">
-                        <div class="w-full h-96 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl flex items-center justify-center">
-                            <div class="text-6xl">🚀</div>
+                        <div class="w-full h-96 bg-gradient-to-br from-mongolRed/20 to-mongolBlue/20 rounded-3xl flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute inset-0 opacity-10">
+                                <svg viewBox="0 0 400 400" class="w-full h-full">
+                                    <defs>
+                                        <pattern id="mongolPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                                            <path d="M20 5 L25 15 L20 20 L15 15 Z M5 15 L15 15 L20 20 L15 25 L5 25 L0 20 Z M35 15 L40 20 L35 25 L25 25 L20 20 L25 15 Z M20 35 L25 40 L20 45 L15 40 Z" fill="#dc2626" opacity="0.3"/>
+                                        </pattern>
+                                    </defs>
+                                    <rect width="400" height="400" fill="url(#mongolPattern)"/>
+                                </svg>
+                            </div>
+                            <div class="text-8xl relative z-10">🏞️</div>
+                            <div class="absolute top-4 right-4 text-4xl">☀️</div>
+                            <div class="absolute bottom-4 left-4 text-3xl">🌙</div>
                         </div>
                     </div>
                 </div>
@@ -149,34 +171,34 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                        서비스
+                        전통 예술과 문화 | Традицион урлаг
                     </h2>
-                    <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
+                    <div class="w-24 h-1 bg-gradient-to-r from-mongolRed to-mongolBlue mx-auto mb-8"></div>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                        다양한 분야의 전문 서비스로 여러분의 비즈니스를 지원합니다
+                        몽골의 풍부한 전통 예술과 문화유산을 현대적인 디자인으로 선보입니다
                     </p>
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="service-card group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                        <div class="w-16 h-16 bg-gradient-to-br from-primary to-blue-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                            💻
+                    <div class="service-card group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-mongolRed/20">
+                        <div class="w-16 h-16 bg-gradient-to-br from-mongolRed to-mongolYellow rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                            ☯️
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">웹 개발</h3>
-                        <p class="text-gray-600 leading-relaxed">반응형 웹사이트 및 웹 애플리케이션 개발로 디지털 존재감을 강화하세요</p>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">소욤보 심볼 | Soyombo</h3>
+                        <p class="text-gray-600 leading-relaxed">몽골의 배초 서예가 자나바자르가 창조한 성스러운 문자와 국가 상징</p>
                     </div>
-                    <div class="service-card group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                        <div class="w-16 h-16 bg-gradient-to-br from-secondary to-green-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                            🎨
+                    <div class="service-card group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-mongolBlue/20">
+                        <div class="w-16 h-16 bg-gradient-to-br from-mongolBlue to-mongolGreen rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                            🏞️
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">디자인</h3>
-                        <p class="text-gray-600 leading-relaxed">사용자 경험을 고려한 UI/UX 디자인으로 브랜드 가치를 높이세요</p>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">유목 문화 | Малчдын соёл</h3>
+                        <p class="text-gray-600 leading-relaxed">초원에서 평화롭게 살아가는 몽골 유목민들의 지혜와 생활 양식</p>
                     </div>
-                    <div class="service-card group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 md:col-span-2 lg:col-span-1">
-                        <div class="w-16 h-16 bg-gradient-to-br from-accent to-yellow-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                            📊
+                    <div class="service-card group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 md:col-span-2 lg:col-span-1 border border-mongolYellow/20">
+                        <div class="w-16 h-16 bg-gradient-to-br from-mongolYellow to-mongolRed rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                            ☸️
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">컨설팅</h3>
-                        <p class="text-gray-600 leading-relaxed">비즈니스 전략 및 기술 컨설팅으로 경쟁력을 확보하세요</p>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">울지 문양 | Ulzii Pattern</h3>
+                        <p class="text-gray-600 leading-relaxed">영원한 매듭과 행복을 상징하는 불교의 신성한 문양과 대칭 기하학적 문양</p>
                     </div>
                 </div>
             </div>
@@ -186,32 +208,32 @@
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                        연락처
+                        연락하기 | Холбоо барих
                     </h2>
-                    <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
+                    <div class="w-24 h-1 bg-gradient-to-r from-mongolRed to-mongolBlue mx-auto mb-8"></div>
                     <p class="text-xl text-gray-600">
-                        프로젝트에 대해 상담하고 싶으시다면 언제든지 연락하세요
+                        몽골의 아름다운 문화와 전통에 대해 더 알고 싶으시다면 언제든지 연락하세요
                     </p>
                 </div>
                 <div class="bg-gray-50 rounded-3xl p-8 md:p-12">
                     <form class="contact-form space-y-6">
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
-                                <label class="block text-sm font-semibold text-gray-700 mb-2">이름</label>
-                                <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 bg-white">
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">이름 | Нэр</label>
+                                <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-mongolRed focus:border-transparent transition-all duration-200 bg-white">
                             </div>
                             <div>
-                                <label class="block text-sm font-semibold text-gray-700 mb-2">이메일</label>
-                                <input type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 bg-white">
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">이메일 | И-мэйл</label>
+                                <input type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-mongolRed focus:border-transparent transition-all duration-200 bg-white">
                             </div>
                         </div>
                         <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-2">메시지</label>
-                            <textarea rows="6" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 bg-white resize-none"></textarea>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">메시지 | Мэдээ</label>
+                            <textarea rows="6" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-mongolRed focus:border-transparent transition-all duration-200 bg-white resize-none"></textarea>
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary to-blue-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-primary transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
-                                <span>메시지 보내기</span>
+                            <button type="submit" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-mongolRed to-mongolBlue text-white font-semibold rounded-xl hover:from-mongolBlue hover:to-mongolRed transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
+                                <span>메시지 보내기 | Мэдээ явуулах</span>
                                 <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path>
                                 </svg>
@@ -226,12 +248,12 @@
     <footer class="bg-gray-900 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <h3 class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-4">
-                    MyBrand
+                <h3 class="text-2xl font-bold bg-gradient-to-r from-mongolRed to-mongolBlue bg-clip-text text-transparent mb-4">
+                    Монгол | Mongolia
                 </h3>
-                <p class="text-gray-400 mb-8">혁신을 통한 성장의 파트너</p>
+                <p class="text-gray-400 mb-8">영원한 푸른 하늘 아래 흉르는 전통과 문화</p>
                 <div class="border-t border-gray-800 pt-8">
-                    <p class="text-gray-400">&copy; 2024 MyBrand. All rights reserved.</p>
+                    <p class="text-gray-400">&copy; 2024 Монгол Mongolia. Мөнх хөх тэнгэр. Eternal Blue Sky.</p>
                 </div>
             </div>
         </div>
