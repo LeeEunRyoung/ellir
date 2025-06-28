@@ -4,75 +4,236 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome - 랜딩 페이지</title>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#10b981',
+                        accent: '#f59e0b',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out',
+                        'fade-in-down': 'fadeInDown 0.8s ease-out',
+                        'bounce-slow': 'bounce 2s infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="logo">
-                <h1>MyBrand</h1>
+<body class="font-sans text-gray-900 bg-white">
+    <header class="fixed top-0 w-full bg-white/80 backdrop-blur-lg z-50 border-b border-gray-200/50 transition-all duration-300">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                        MyBrand
+                    </h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">홈</a>
+                        <a href="#about" class="nav-link text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">소개</a>
+                        <a href="#services" class="nav-link text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">서비스</a>
+                        <a href="#contact" class="nav-link text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">연락처</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button type="button" class="mobile-menu-button text-gray-700 hover:text-primary focus:outline-none focus:text-primary">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home">홈</a></li>
-                <li><a href="#about">소개</a></li>
-                <li><a href="#services">서비스</a></li>
-                <li><a href="#contact">연락처</a></li>
-            </ul>
         </nav>
+        <div class="mobile-menu hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">홈</a>
+                <a href="#about" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">소개</a>
+                <a href="#services" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">서비스</a>
+                <a href="#contact" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">연락처</a>
+            </div>
+        </div>
     </header>
 
     <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>환영합니다</h1>
-                <p>혁신적인 솔루션으로 당신의 비즈니스를 성장시키세요</p>
-                <button class="cta-button" onclick="scrollToSection('contact')">시작하기</button>
+        <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50">
+            <div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"></div>
+            <div class="absolute top-20 left-10 w-32 h-32 bg-primary/10 rounded-full blur-xl animate-bounce-slow"></div>
+            <div class="absolute bottom-20 right-10 w-48 h-48 bg-secondary/10 rounded-full blur-xl animate-bounce-slow" style="animation-delay: 1s;"></div>
+            
+            <div class="relative text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-extrabold text-gray-900 mb-8 animate-fade-in-up">
+                    혁신을 통한
+                    <span class="block bg-gradient-to-r from-primary via-purple-500 to-secondary bg-clip-text text-transparent">
+                        성장의 파트너
+                    </span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in-up" style="animation-delay: 0.2s;">
+                    최신 기술과 창의적인 솔루션으로 여러분의 비즈니스를 다음 단계로 끌어올리세요
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style="animation-delay: 0.4s;">
+                    <button onclick="scrollToSection('contact')" class="inline-flex items-center px-8 py-4 border border-transparent text-lg font-semibold rounded-full text-white bg-gradient-to-r from-primary to-blue-600 hover:from-blue-600 hover:to-primary transform hover:scale-105 transition-all duration-200 shadow-xl hover:shadow-2xl">
+                        <span>시작하기</span>
+                        <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <button onclick="scrollToSection('about')" class="inline-flex items-center px-8 py-4 border-2 border-gray-300 text-lg font-semibold rounded-full text-gray-700 bg-white hover:bg-gray-50 hover:border-primary transition-all duration-200 shadow-lg hover:shadow-xl">
+                        더 알아보기
+                    </button>
+                </div>
             </div>
         </section>
 
-        <section id="about" class="about">
-            <div class="container">
-                <h2>우리에 대해</h2>
-                <p>우리는 고객의 성공을 위해 최선을 다하는 전문가 팀입니다. 최신 기술과 창의적인 아이디어로 여러분의 목표를 달성하도록 도와드립니다.</p>
-            </div>
-        </section>
-
-        <section id="services" class="services">
-            <div class="container">
-                <h2>서비스</h2>
-                <div class="service-grid">
-                    <div class="service-card">
-                        <h3>웹 개발</h3>
-                        <p>반응형 웹사이트 및 웹 애플리케이션 개발</p>
+        <section id="about" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        우리에 대해
+                    </h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-8">
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            우리는 고객의 성공을 위해 최선을 다하는 전문가 팀입니다. 최신 기술과 창의적인 아이디어로 여러분의 목표를 달성하도록 도와드립니다.
+                        </p>
+                        <div class="grid grid-cols-2 gap-8">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-primary mb-2">100+</div>
+                                <div class="text-gray-600">완료된 프로젝트</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-primary mb-2">50+</div>
+                                <div class="text-gray-600">만족한 고객</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-primary mb-2">5년</div>
+                                <div class="text-gray-600">경험</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-primary mb-2">24/7</div>
+                                <div class="text-gray-600">지원</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="service-card">
-                        <h3>디자인</h3>
-                        <p>사용자 경험을 고려한 UI/UX 디자인</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>컨설팅</h3>
-                        <p>비즈니스 전략 및 기술 컨설팅 서비스</p>
+                    <div class="relative">
+                        <div class="w-full h-96 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl flex items-center justify-center">
+                            <div class="text-6xl">🚀</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2>연락처</h2>
-                <form class="contact-form">
-                    <input type="text" placeholder="이름" required>
-                    <input type="email" placeholder="이메일" required>
-                    <textarea placeholder="메시지" rows="5" required></textarea>
-                    <button type="submit">메시지 보내기</button>
-                </form>
+        <section id="services" class="py-24 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        서비스
+                    </h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        다양한 분야의 전문 서비스로 여러분의 비즈니스를 지원합니다
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="service-card group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="w-16 h-16 bg-gradient-to-br from-primary to-blue-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                            💻
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">웹 개발</h3>
+                        <p class="text-gray-600 leading-relaxed">반응형 웹사이트 및 웹 애플리케이션 개발로 디지털 존재감을 강화하세요</p>
+                    </div>
+                    <div class="service-card group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="w-16 h-16 bg-gradient-to-br from-secondary to-green-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                            🎨
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">디자인</h3>
+                        <p class="text-gray-600 leading-relaxed">사용자 경험을 고려한 UI/UX 디자인으로 브랜드 가치를 높이세요</p>
+                    </div>
+                    <div class="service-card group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 md:col-span-2 lg:col-span-1">
+                        <div class="w-16 h-16 bg-gradient-to-br from-accent to-yellow-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                            📊
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">컨설팅</h3>
+                        <p class="text-gray-600 leading-relaxed">비즈니스 전략 및 기술 컨설팅으로 경쟁력을 확보하세요</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-24 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        연락처
+                    </h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
+                    <p class="text-xl text-gray-600">
+                        프로젝트에 대해 상담하고 싶으시다면 언제든지 연락하세요
+                    </p>
+                </div>
+                <div class="bg-gray-50 rounded-3xl p-8 md:p-12">
+                    <form class="contact-form space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">이름</label>
+                                <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 bg-white">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">이메일</label>
+                                <input type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 bg-white">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">메시지</label>
+                            <textarea rows="6" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 bg-white resize-none"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary to-blue-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-primary transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
+                                <span>메시지 보내기</span>
+                                <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 MyBrand. All rights reserved.</p>
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h3 class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-4">
+                    MyBrand
+                </h3>
+                <p class="text-gray-400 mb-8">혁신을 통한 성장의 파트너</p>
+                <div class="border-t border-gray-800 pt-8">
+                    <p class="text-gray-400">&copy; 2024 MyBrand. All rights reserved.</p>
+                </div>
+            </div>
         </div>
     </footer>
 
